@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Physic Game </title>
+</head>
+
+<body>
+ <h1>Physic game
+
+    <div id ="game">
+        <p>guess what Letter i am thinking.</p>
+    </div>
+ </h1>
+ <script> type ="text/javascript"
+    var letter = [ "j", "o", "r", "d", "a", "n"];
+    var wins = 0;
+    var losses = 0;
+    var numberOfGuesses = 0;   
+    
+     
+    
+    document.onkeyup = function () {
+        var userguess = String.fromCharCode(event.keyCode).toLowerCase();
+
+        console.log(userguess);
+
+        var computerGuess = letter[Math.floor(Math.random()*letter.length)];
+       
+       
+        console.log(computerGuess);
+
+       
+
+        if (userguess=='j' || userguess=='o' || userguess==userguess=='r' || userguess== 'd' || userguess=='a' || userguess== 'n')
+        {
+            alert("you win"); { wins++; } alert("wins: " + wins);}
+            else { alert("you lose, please try again"); { losses++; } alert("losses: " + losses);}
+
+            if (userguess=='j' || userguess=='o' || userguess==userguess=='r' || userguess== 'd' || userguess=='a' || userguess== 'n')
+            alert("guess number"); {numberOfGuesses++;} alert("numberOfGuesses " + numberOfGuesses);
+
+
+           
+        
+        
+            var html = "<p> Press any key to guess what letter I am thinking</p>" +
+        "<p>wins: " + wins + "</p>" +
+        "<p>losses: " + losses + "</p>" +
+        "<p>numberofGuesses: " + numberOfGuesses + "</p>";
+
+        document.querySelector('#game').innerHTML = html;
+
+         
+//--- i still need funcitons that keeps track of a letter that was guessed and then as well one that resets the page. --//
+//--- also need to link my .js link ---//
+        
+        
+    }
+
+
+
+
+
+
+ </script>
+</body>
+</html>
